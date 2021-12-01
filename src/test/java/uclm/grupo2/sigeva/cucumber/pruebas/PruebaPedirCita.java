@@ -47,6 +47,7 @@ public class PruebaPedirCita {
 		LoginCtrl.iniciarSesion(uDTO);	
 		assertEquals("Cita creada",CitasCtrl.insertarCita());
 		cita.deleteAll(cita.getByPacienteOrderByNumCitaAsc(optUser.get()));
+
 		LoginCtrl.cerrarSesion();
 	}
 
